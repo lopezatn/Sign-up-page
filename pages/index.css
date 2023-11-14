@@ -10,10 +10,10 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-        "login-links"
+    grid-template-areas:
         "header"
         "account-creation"
+        "login-links"
         "footer";
     height: 100vh;
 }
@@ -46,8 +46,8 @@ body {
     place-items: center;
     width: 600px;
     padding: 25px;
-    background-color: #f8f8f8; 
-    border-radius: 16px; 
+    background-color: #f8f8f8;
+    border-radius: 16px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 1);
 }
 
@@ -59,11 +59,24 @@ label {
 
 input {
     padding: 14px;
-    margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
     width: 100%;
-    box-sizing: border-box;
+    margin-bottom: 0;
+}
+
+small {
+    font-size: x-small;
+    margin: 0 auto 20px auto;
+    padding-top: 0;
+}
+
+.invalid {
+    border-color: crimson;
+}
+
+.valid {
+    border-color: rgb(45, 171, 45);
 }
 
 button {
