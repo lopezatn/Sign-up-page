@@ -16,35 +16,35 @@
     </header>
     <section class="account-creation">
         <h2 class="account-creation-text">Create an Account to take a look!</h2>
-        <h5>*Please note that all inputs are required</h5>
+        <h5 class="required-inputs">*Please note that all inputs are required</h5>
         <form class="signup-form" action="./pages/portfolio.html" method="post">
 
             <!-- User Name & Last Name -->
             <label for="firstName">First Name:</label>
             <input type="text" id="firstName" name="First Name" onblur="validateName()">
-            <small id="firstNameText">* Only letters, minimum 2 characters.</small>
+            <small id="firstNameHint">* Only letters, minimum 2 characters.</small>
 
             <!-- Contact Info -->
             <label for="email">Email:</label>
             <input type="email" id="email" name="Email" onblur="validateEmail()">
-            <small id="emailText">* Write a valid and personal Gmail account.</small>
+            <small id="emailHint">* Write a valid and personal Gmail account.</small>
 
             <label for="phone">Phone:</label>
             <input type="tel" id="phone" name="Phone" onblur="validatePhone()">
-            <small id="phoneText">* Write a phone number in this format: 000-000-0000</small>
+            <small id="phoneHint">* Write a phone number in this format: 000-000-0000</small>
 
             <!-- Account Creds -->
             <label for="username">Username:</label>
             <input type="text" id="username" name="Username" onblur="validateUsername()">
-            <small id="usernameText">* Only letters and numbers. Minimum 3 characters, maximum 7 characters. A letter is always followed by a number at least once.</small>
+            <small id="usernameHint">* Only letters and numbers. Minimum 3 characters, maximum 7 characters. A letter is always followed by a number at least once.</small>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="Password" onblur="validatePassword()">
-            <small id="passwordText">* Minimum 7 characters</small>
+            <small id="passwordHint">* Minimum 7 characters</small>
 
             <label for="confirmPassword">Confirm Password:</label>
             <input type="password" id="confirmPassword" name="Confirm password" onblur="validateConfirmationPassword()">
-            <small id="confirmPasswordText">* Write the same password</small>
+            <small id="confirmPasswordHint">* Write the same password</small>
 
             <button id="button" type="submit">Sign Up</button>
         </form>
