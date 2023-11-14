@@ -23,6 +23,12 @@ body {
     text-align: center;
 }
 
+.required-inputs {
+    text-align: left;
+    padding-bottom: 5px;
+    text-decoration: underline;
+}
+
 .login-links {
     grid-area: login-links;
     text-align: right;
