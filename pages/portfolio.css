@@ -141,16 +141,59 @@ main {
 
 .card {
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr 1fr 2fr;
+    grid-template-areas: 
+        "project-image"
+        "project-name"
+        "project-desc";
     align-self: center;
     margin-bottom: 30px;
     width: 275px;
     height: 300px;
-    padding: 20px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
     position: relative;
 
+}
+
+.open-in-new {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../images/open-in-new.svg);
+}
+
+.project-image {
+    grid-area: project-image;
+    width: 100%;
+    height: 100%;
+    background-color: darkred;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    >h4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+        font-size: 24px;
+        margin: 0;
+    }
+}
+
+.project-name {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: space-between;
+    grid-area: project-name;
+    font-size: 18px;
+    padding: 0 15px;
+
+    
     >button {
         background: none;
         border: none;
@@ -163,22 +206,12 @@ main {
 
 }
 
-.background-color {
-    width: 100%;
-    height: 50%;
-    background-color: darkred;
-    position: absolute;
-    top: 0;
-    left: 0;
+.project-desc {
+    grid-area: project-desc;
+    padding: 0 15px;
 
-    >h4 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: inherit;
-        font-size: 24px;
-    }
 }
+
 
 
 footer {
