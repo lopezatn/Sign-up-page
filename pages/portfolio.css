@@ -5,7 +5,6 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Oswald', sans-serif;
 }
 
 body {
@@ -112,7 +111,7 @@ h2 {
     transition: 0.5s ease-in-out;
 }
 
-.social>a>i {
+.social>a>span {
     font-size: 1.6em;
     width: auto;
     color: black;
@@ -124,6 +123,7 @@ h2 {
 
 main {
     display: grid;
+    font-family: 'Playfair Display', serif;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 3fr 3fr;
     grid-template-areas: 
@@ -213,6 +213,7 @@ main {
 
 footer {
     display: grid;
+    font-family: 'Playfair Display', serif;
     justify-items: center;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
@@ -221,9 +222,26 @@ footer {
     background-color: #0174BE;
     border: 1px solid #ddd;
     padding: 20px;
+    font-size: 18px;
 }
 
 .footer-left {
+
+    .phone-outline {
+        display: inline-block;
+        filter: invert(1);
+        width: 18px;
+        height: 18px;
+        background-image: url(../images/phone-outline.svg);
+    }
+    
+    .email-outline {
+        display: inline-block;
+        filter: invert(1);
+        width: 18px;
+        height: 18px;
+        background-image: url(../images/email-outline.svg);
+    }
 
 }
 
@@ -247,7 +265,7 @@ footer {
     transition: 0.5s ease-in-out;
 }
 
-.footer-social>a>i {
+.footer-social>a>span {
     font-size: 1.6em;
     width: auto;
     color: black;

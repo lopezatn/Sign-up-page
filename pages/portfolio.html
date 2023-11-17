@@ -10,10 +10,7 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Oswald:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Portfolio page</title>
   </head>
   <body>
@@ -25,7 +22,7 @@
       </div>
       <div class="heroInfo">
         <div class="clip"></div>
-        <h2>About Us</h2>
+        <h2>About us</h2>
         <p>
           Lorem ipsum dolor sit amet. Qui commodi enim quo quia quibusdam sed
           itaque illo. Ut velit placeat qui dolorem quisquam et galisum error
@@ -34,20 +31,19 @@
         </p>
         <div class="social">
           <a href="#" target="_blank">
-            <i class="devicon-github-original"></i>
+            <span class="devicon-github-original"></span>
           </a>
           <a href="#" target="_blank">
-            <i class="devicon-linkedin-plain"></i>
+            <span class="devicon-linkedin-plain"></span>
           </a>
           <a href="#">
-            <i class="devicon-twitter-original"></i>
+            <span class="devicon-twitter-original"></span>
           </a>
         </div>
       </div>
     </header>
 
     <main>
-
       <!-- Since we're gonna have different screenshots of projects here, how would you like to manage it?
       My thought was to run everything by DOM with elementID, but maybe you have a better idea -->
       <h2 class="title">Our Work</h2>
@@ -158,32 +154,35 @@
     <footer>
       <section class="footer-left">
         <h2>Contact me</h2>
-        <p>Please get in touch if you think our work could be mutually beneficial!</p>
+        <p>
+          Please get in touch if you think our work could be mutually
+          beneficial!
+        </p>
         <p>1234 Random Road</p>
         <p>Random Town, California 12345</p>
-        <p>555-555-5555
-          
-        </p>
-        <a href="mailto:kreativs@gmail.com">kreativs@gmail.com
-
-        </a>
+        <span class="phone-outline"></span>
+        <p>555-555-5555</p>
+        <span class="email-outline"></span>
+        <a href="mailto:kreativs@gmail.com">kreativs@gmail.com</a>
         <div class="footer-social">
           <a href="#" target="_blank">
-            <i class="devicon-github-original"></i>
+            <span class="devicon-github-original"></span>
           </a>
           <a href="#" target="_blank">
-            <i class="devicon-linkedin-plain"></i>
+            <span class="devicon-linkedin-plain"></span>
           </a>
           <a href="#">
-            <i class="devicon-twitter-original"></i>
+            <span class="devicon-twitter-original"></span>
           </a>
         </div>
       </section>
-        <!-- We need another image here -->
-        <img src="../images/profile1.jpg" alt="Partners picture" class="footer-img"/>
-      <section class="footer-right">
-
-      </section>
+      <!-- We need another image here -->
+      <img
+        src="../images/profile1.jpg"
+        alt="Partners picture"
+        class="footer-img"
+      />
+      <section class="footer-right"></section>
     </footer>
   </body>
 </html>
