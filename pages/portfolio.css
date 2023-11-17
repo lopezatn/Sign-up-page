@@ -1,6 +1,6 @@
 :root {
     --width: calc(100vw / 2.6);
-    --color: #0174BE;
+    --color: #0891B2;
 }
 
 * {
@@ -219,7 +219,7 @@ footer {
     grid-template-areas: 
         "footer-left footer-right";
     color: white;
-    background-color: #0174BE;
+    background-color: var(--color);
     border: 1px solid #ddd;
     padding: 20px;
     font-size: 18px;
@@ -227,33 +227,45 @@ footer {
 
 .footer-left {
 
-    .phone-outline {
+    .icon {
         display: inline-block;
         filter: invert(1);
-        width: 18px;
+        width: 25px;
         height: 18px;
+        background-repeat: no-repeat;
+    }
+
+    .phone-outline {
         background-image: url(../images/phone-outline.svg);
     }
     
     .email-outline {
-        display: inline-block;
-        filter: invert(1);
-        width: 18px;
-        height: 18px;
         background-image: url(../images/email-outline.svg);
     }
 
 }
 
 .footer-right {
-
+    width: auto;
 }
 
 .footer-img {
     width: 550px;
 }
 
+.flex-center {
+    display: flex;
+    align-items: center;
+
+    >a {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+    }
+}
+
 .footer-social {
+    padding-top: 15px;
     bottom: 20px;
     right: 25px;
     display: flex;
