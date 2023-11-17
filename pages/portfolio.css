@@ -104,7 +104,6 @@ h2 {
     bottom: 20px;
     right: 25px;
     display: flex;
-    align-content: center;
 }
 
 .social>a {
@@ -212,12 +211,50 @@ main {
 
 }
 
-
-
 footer {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "footer-left footer-right";
+    color: white;
+    background-color: #0174BE;
     border: 1px solid #ddd;
     padding: 20px;
-    text-align: center;
+}
+
+.footer-left {
+
+}
+
+.footer-right {
+
+}
+
+.footer-img {
+    width: 550px;
+}
+
+.footer-social {
+    bottom: 20px;
+    right: 25px;
+    display: flex;
+}
+
+.footer-social>a {
+    text-decoration: none;
+    padding-left: 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.footer-social>a>i {
+    font-size: 1.6em;
+    width: auto;
+    color: black;
+}
+
+.footer-social>a:hover {
+    scale: 1.2;
 }
 
 @media screen and (max-width: 834px)  {
