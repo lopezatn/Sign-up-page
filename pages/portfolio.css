@@ -129,7 +129,6 @@ main {
     grid-template-rows: 1fr 3fr 3fr;
     grid-template-areas: 
         "title title title";
-    border: 1px solid #ddd;
     justify-items: center;
     padding: 45px;
 }
@@ -137,6 +136,7 @@ main {
 .title {
     grid-area: title;
     justify-self: flex-start;
+    padding-left: 50px;
 }
 
 .card {
@@ -151,10 +151,121 @@ main {
     border: 1px solid #ddd;
 }
 
+<<<<<<< Updated upstream
+=======
+.open-in-new {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../images/open-in-new.svg);
+}
+
+.project-image {
+    grid-area: project-image;
+    width: 100%;
+    height: 100%;
+    background-color: darkred;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    >h4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+        font-size: 24px;
+        margin: 0;
+    }
+}
+
+.project-image.one {
+    background-color: transparent;
+    background-image: url('../images/Project1CFR.png');
+    background-size: cover;
+}
+
+.project-image.three {
+    background-color: transparent;
+    background-image: url('../images/Project2CFR.png');
+    background-size: cover;
+}
+
+.project-image.five {
+    background-color: transparent;
+    background-image: url('../images/Project3CFR.png');
+    background-size: cover;
+}
+
+.project-name {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: space-between;
+    grid-area: project-name;
+    font-size: 18px;
+    padding: 0 15px;
+
+    
+    >button {
+        background: none;
+        border: none;
+        padding: 0;
+        font: inherit;
+        color: inherit;
+        cursor: pointer;
+        margin-left: 15px;
+    }
+
+}
+
+.project-desc {
+    grid-area: project-desc;
+    padding: 0 15px;
+
+}
+
+>>>>>>> Stashed changes
 footer {
-    border: 1px solid #ddd;
+    width: 100vw;
+    color: #fff;
+    background-color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+}
+
+footer>section {
+    width: 48vw;
+    padding: 0 30px;
+}
+
+.social-two>a {
+    text-decoration: none;
+    padding-right: 20px;
+    color: black;
+    font-size: 1.5em;
+    transition: 0.5s ease-in-out;
+}
+
+.social-two>a:hover {
+    font-size: 2em;
+    color: #fff;
+}
+
+.last-profile {
+    width: 500px;
+}
+
+.last-profile>img {
+    width: 100%;
     padding: 20px;
-    text-align: center;
+    filter: sepia(69%);
+    transition: 0.5s ease-in-out;
+}
+
+.last-profile>img:hover {
+    filter: sepia(0%);
 }
 
 @media screen and (max-width: 834px)  {
@@ -204,6 +315,19 @@ footer {
         grid-template-columns: auto auto;
         grid-template-rows: 100px auto auto auto;
         grid-template-areas: "title title";
+    }
+    footer>section {
+        width: 35vw;
+        height: auto;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .contact-us {
+        padding-bottom: 20px;
+    }
+    .last-profile>img {
+        height: 100%;
+        object-fit: cover;
     }
 }
 
@@ -260,8 +384,40 @@ footer {
         display: block;
         width: 100vw;
     }
+    .title {
+        padding-left: 0;
+    }
     .card {
         width: 100%;
+    }
+    footer {
+        display: block;
+        padding-bottom: 0;
+    }
+    footer>section {
+        width: 100%;
+    }
+    .contact-us>h3 {
+        font-size: 2em;
+        text-align: center;
+    }
+    .social-two {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        align-content: space-around;
+    }
+    .last-profile {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+    .last-profile>img {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        object-fit: cover;
     }
 }
 /*
