@@ -25,7 +25,7 @@ function validateName() {
         firstName.classList.add('valid');
         theButton();
     } else {
-        firstNameHint.innerHTML = '* Please, only letters and minimum 2 characters!!!'; 
+        firstNameHint.innerHTML = '* Please, only letters and minimum 2 characters'; 
         firstName.classList.remove('valid');
         firstName.classList.add('invalid');
         firstName.value = '';
@@ -41,7 +41,7 @@ function validateEmail() {
         email.classList.add('valid');
         theButton();
     } else {
-        emailHint.innerHTML = '* Sorry, we only accept Gmail accounts...it\'s not you, it\'s us!'; 
+        emailHint.innerHTML = '* We only accept Gmail accounts'; 
         email.classList.remove('valid');
         email.classList.add('invalid');
         email.value = '';
@@ -57,7 +57,7 @@ function validatePhone() {
         phone.classList.add('valid');
         theButton();
     } else {
-        phoneHint.innerHTML = '* Maybe you don\'t read well. Use this format: 000-000-0000'; 
+        phoneHint.innerHTML = '* Please use this format: 000-000-0000'; 
         phone.classList.remove('valid');
         phone.classList.add('invalid');
         phone.value = '';
@@ -74,7 +74,7 @@ function validateUsername() {
         username.classList.add('valid');
         theButton();
     } else {
-        usernameHint.innerHTML = `* Letters AND numbers. 3 - 7 characters. A number follows a letter once.`; 
+        usernameHint.innerHTML = `* A number is mandatory.`; 
         username.classList.remove('valid');
         username.classList.add('invalid');
         username.value = '';
@@ -93,7 +93,7 @@ function checkBothPasswords() {
         confirmPassword.classList.add('invalid');
         password.value = '';
         confirmPassword.value = '';
-        passwordHint.innerHTML = '* Minimum 7 characters ... again!'; 
+        passwordHint.innerHTML = '* Please make sure you are typing minimum 7 characters'; 
         password.classList.remove('valid');
         password.classList.add('invalid');
     }
@@ -105,7 +105,7 @@ function validatePassword() {
         password.classList.remove('invalid');
         password.classList.add('valid');
     } else {
-        passwordHint.innerHTML = '* This is the easiest input. Please type minimum 7 characters!'; 
+        passwordHint.innerHTML = '* Please make sure you are typing minimum 7 characters'; 
         password.classList.remove('valid');
         password.classList.add('invalid');
         password.value = '';
@@ -116,7 +116,7 @@ function validateConfirmationPassword() {
     if (confirmPassword.value.length > 6) {
         checkBothPasswords();
     } else {
-        confirmPasswordHint.innerHTML = '* You already passed through this... please type minimum 7 characters!' 
+        confirmPasswordHint.innerHTML = '* Please make sure you are typing minimum 7 characters' 
         confirmPassword.classList.remove('valid');
         confirmPassword.classList.add('invalid');
         confirmPassword.value = '';

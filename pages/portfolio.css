@@ -291,18 +291,18 @@ footer>section {
     color: #fff;
 }
 
-.last-profile {
+.footer-right {
     width: 500px;
 }
 
-.last-profile>img {
+.footer-right>img {
     width: 100%;
     padding: 20px 0 20px 20px;
     filter: sepia(69%);
     transition: 0.7s ease-in-out;
 }
 
-.last-profile>img:hover {
+.footer-right>img:hover {
     filter: sepia(0%);
 }
 
@@ -319,7 +319,7 @@ footer>section {
         height: calc(100vw / 2.1);
         overflow: visible;
     }
-    .heroPicture>h1 {
+    .heroPicture>figure {
         position: absolute;
         top: -12px;
         right: -75%;
@@ -364,7 +364,7 @@ footer>section {
     .contact-us {
         padding-bottom: 20px;
     }
-    .last-profile>img {
+    .footer-right>img {
         height: 100%;
         object-fit: cover;
     }
@@ -386,7 +386,7 @@ footer>section {
         height: 600px;
         box-shadow: none;
     }
-    .heroPicture>h1 {
+    .heroPicture>figure {
         position: relative;
         top: -200px;
         right: auto;
@@ -445,12 +445,12 @@ footer>section {
         padding: 0;
         align-content: space-around;
     }
-    .last-profile {
+    .footer-right {
         width: 100vw;
         margin: 0;
         padding: 0;
     }
-    .last-profile>img {
+    .footer-right>img {
         width: 100%;
         margin: 0;
         padding: 0;
