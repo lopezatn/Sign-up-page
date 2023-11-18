@@ -25,7 +25,7 @@ function validateName() {
         firstName.classList.add('valid');
         theButton();
     } else {
-        firstNameHint.innerHTML = '* Please, only letters and minimum 2 characters'; 
+        firstNameHint.innerHTML = '* Please, only letters and minimum 2 characters!!!'; 
         firstName.classList.remove('valid');
         firstName.classList.add('invalid');
         firstName.value = '';
@@ -33,15 +33,16 @@ function validateName() {
 }
 
 function validateEmail() {
-    const regex = /@gmail.com/;
+    const regexOne = /@/;
+    const regexTwo = /\./;
 
-    if (regex.test(email.value)) {
+    if (regexOne.test(email.value) && regexTwo.test(email.value)) {
         emailHint.innerHTML = 'Correct!'; 
         email.classList.remove('invalid');
         email.classList.add('valid');
         theButton();
     } else {
-        emailHint.innerHTML = '* We only accept Gmail accounts'; 
+        emailHint.innerHTML = '* Please provide a valid email!'; 
         email.classList.remove('valid');
         email.classList.add('invalid');
         email.value = '';
@@ -49,15 +50,15 @@ function validateEmail() {
 }
 
 function validatePhone() {
-    const regex = /[0-9]{3}-[0-9]{3}-[0-9]{4}/;
+    const regex = /^\+?[0-9]{9,14}$/;
 
-    if (regex.test(phone.value) && phone.value.length === 12) {
+    if (regex.test(phone.value)) {
         phoneHint.innerHTML = 'Correct!'; 
         phone.classList.remove('invalid');
         phone.classList.add('valid');
         theButton();
     } else {
-        phoneHint.innerHTML = '* Please use this format: 000-000-0000'; 
+        phoneHint.innerHTML = '* Please provide a valid phone number, without spaces or slashes.'; 
         phone.classList.remove('valid');
         phone.classList.add('invalid');
         phone.value = '';
@@ -65,16 +66,13 @@ function validatePhone() {
 }
 
 function validateUsername() {
-    const regex = /[A-z]{1,6}[0-9]{1,6}/g;
-    const negativeRegex = /[\+|\*|\!|\?|\.|\_|\:|\%!\&|\$|\(|\)|\=|\{|\}|\[|\]|\´|\`|\'|\"|\@|\^|\#|\||\ç|\Ç|\;|\<|\>]/g;
-
-    if (regex.test(username.value) && !negativeRegex.test(username.value)  && username.value.length > 2 && username.value.length < 8) {
+    if (username.value.length > 2) {
         usernameHint.innerHTML = 'Correct!'; 
         username.classList.remove('invalid');
         username.classList.add('valid');
         theButton();
     } else {
-        usernameHint.innerHTML = `* A number is mandatory.`; 
+        usernameHint.innerHTML = `* Please type minimum 3 characters.`; 
         username.classList.remove('valid');
         username.classList.add('invalid');
         username.value = '';
@@ -88,24 +86,37 @@ function checkBothPasswords() {
         confirmPassword.classList.add('valid');
         theButton();
     } else {
+        passwordHint.innerHTML = `* Minimum 7 characters. 
+            <br>Use at least one upper case letter, a lower case letter,
+            <br>a number and a special character.`; 
         confirmPasswordHint.innerHTML = '* You typed a valid format, however your passwords didn\'t match'; 
         confirmPassword.classList.remove('valid');
         confirmPassword.classList.add('invalid');
         password.value = '';
         confirmPassword.value = '';
-        passwordHint.innerHTML = '* Please make sure you are typing minimum 7 characters'; 
         password.classList.remove('valid');
         password.classList.add('invalid');
     }
 }
 
 function validatePassword() {
-    if (password.value.length > 6) {
+    const capitalRegex = /[A-Z]/;
+    const lowerRegex = /[a-z]/;
+    const numRegex = /[0-9]/;
+    const characterRegex = /[\+|\*|\!|\?|\.|\_|\:|\%!\&|\$|\(|\)|\=|\{|\}|\[|\]|\´|\`|\'|\"|\@|\^|\#|\||\ç|\Ç|\;|\<|\>]/g;
+
+    if ((password.value.length > 6) && 
+        capitalRegex.test(password.value) && 
+        lowerRegex.test(password.value) && 
+        numRegex.test(password.value) && 
+        characterRegex.test(password.value)) {
         passwordHint.innerHTML = 'You typed a valid format!'; 
         password.classList.remove('invalid');
         password.classList.add('valid');
     } else {
-        passwordHint.innerHTML = '* Please make sure you are typing minimum 7 characters'; 
+        passwordHint.innerHTML = `* Minimum 7 characters. 
+                                    <br>Use at least one upper case letter, a lower case letter,
+                                    <br>a number and a special character.`; 
         password.classList.remove('valid');
         password.classList.add('invalid');
         password.value = '';
@@ -113,10 +124,21 @@ function validatePassword() {
 }
 
 function validateConfirmationPassword() {
-    if (confirmPassword.value.length > 6) {
+    const capitalRegex = /[A-Z]/;
+    const lowerRegex = /[a-z]/;
+    const numRegex = /[0-9]/;
+    const characterRegex = /[\+|\*|\!|\?|\.|\_|\:|\%!\&|\$|\(|\)|\=|\{|\}|\[|\]|\´|\`|\'|\"|\@|\^|\#|\||\ç|\Ç|\;|\<|\>]/g;
+
+    if (confirmPassword.value.length > 6 && 
+        capitalRegex.test(confirmPassword.value) && 
+        lowerRegex.test(confirmPassword.value) && 
+        numRegex.test(confirmPassword.value) && 
+        characterRegex.test(confirmPassword.value)) {
         checkBothPasswords();
     } else {
-        confirmPasswordHint.innerHTML = '* Please make sure you are typing minimum 7 characters' 
+        confirmPasswordHint.innerHTML = `* Minimum 7 characters. 
+                                            <br>Use at least one upper case letter, a lower case letter,
+                                            <br>a number and a special character.`; 
         confirmPassword.classList.remove('valid');
         confirmPassword.classList.add('invalid');
         confirmPassword.value = '';
