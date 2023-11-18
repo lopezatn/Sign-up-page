@@ -45,14 +45,16 @@
 
     <main>
       <!-- Since we're gonna have different screenshots of projects here, how would you like to manage it?
-      My thought was to run everything by DOM with elementID, but maybe you have a better idea -->
+      My thought was to run everything by DOM with elementID, but maybe you have a better idea
+
+      However you want to display them is fine with me. For now I will put three images using an additional class,
+      just to have the three img... if you want to change the order of the projects is also fine with me
+      If you decide to change any name of an id or a class please take a look to the css file to change the names as well -->
       <h2 class="title">Our Work</h2>
       <article class="card">
-        <div class="project-image">
-          <h4>screenshot of project</h4>
-        </div>
+        <div class="project-image one"></div>
         <div class="project-name">
-          <p>Project name</p>
+          <p>Granulator</p>
           <button aria-label="GitHub">
             <span class="devicon-github-original"></span>
           </button>
@@ -61,7 +63,7 @@
           </button>
         </div>
         <div class="project-desc">
-          <small>Short description of the project.</small>
+          <small>Granular coded with Max/MSP and JS.</small>
         </div>
       </article>
       <article class="card">
@@ -82,11 +84,9 @@
         </div>
       </article>
       <article class="card">
-        <div class="project-image">
-          <h4>screenshot of project</h4>
-        </div>
+        <div class="project-image three"></div>
         <div class="project-name">
-          <p>Project name</p>
+          <p>Rot-13</p>
           <button aria-label="GitHub">
             <span class="devicon-github-original"></span>
           </button>
@@ -95,7 +95,7 @@
           </button>
         </div>
         <div class="project-desc">
-          <small>Short description of the project.</small>
+          <small>A Rot-13 app coded with React.</small>
         </div>
       </article>
       <article class="card">
@@ -116,11 +116,9 @@
         </div>
       </article>
       <article class="card">
-        <div class="project-image">
-          <h4>screenshot of project</h4>
-        </div>
+        <div class="project-image five"></div>
         <div class="project-name">
-          <p>Project name</p>
+          <p>Parallax</p>
           <button aria-label="GitHub">
             <span class="devicon-github-original"></span>
           </button>
@@ -129,7 +127,7 @@
           </button>
         </div>
         <div class="project-desc">
-          <small>Short description of the project.</small>
+          <small>A quite simple parallax effect.</small>
         </div>
       </article>
       <article class="card">
@@ -153,40 +151,30 @@
 
     <footer>
       <section class="footer-left">
-        <h2>Contact me</h2>
-        <p>
-          Please get in touch if you think our work could be mutually
-          beneficial!
+        <h3>Contact Us</h3>
+        <p>Please get in touch if you think our work could be mutually beneficial!</p>
+        <p>1234 Random Road
+          <br> Random Town, Planet 3
         </p>
-        <p>1234 Random Road</p>
-        <p>Random Town, California 12345</p>
-        <div class="flex-center">
-          <span class="icon phone-outline"></span>
-          <p>555-555-5555</p>
-        </div>
-        <div class="flex-center">
-          <span class="icon email-outline"></span>
-          <a href="mailto:kreativs@gmail.com">kreativs@gmail.com</a>
-        </div>
-        <div class="footer-social">
+        <span class="icon phone-outline"></span>
+        <p class="phone">555-555-5555</p>
+        <span class="icon email-outline"></span>
+        <a class="email" href="mailto:kreativs@gmail.com">kreativs@gmail.com</a>
+        <div class="social-two">
           <a href="#" target="_blank" aria-label="Github Profile">
-            <span class="devicon-github-original"></span>
+            <i class="devicon-github-original"></i>
           </a>
           <a href="#" target="_blank" aria-label="LinkedIn Profile">
-            <span class="devicon-linkedin-plain"></span>
+            <i class="devicon-linkedin-plain"></i>
           </a>
           <a href="#" target="_blank" aria-label="Twitter Profile">
-            <span class="devicon-twitter-original"></span>
+            <i class="devicon-twitter-original"></i>
           </a>
         </div>
       </section>
-      <!-- We need another image here -->
-      <img
-        src="../images/profile1.jpg"
-        alt="Partners picture"
-        class="footer-img"
-      />
-      <section class="footer-right"></section>
+      <section class="last-profile">
+        <img src="../images/profile2.jpg" alt="Profile picture">
+      </section>
     </footer>
   </body>
 </html>
