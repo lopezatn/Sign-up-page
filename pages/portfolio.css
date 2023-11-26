@@ -9,21 +9,27 @@
 
 body {
     font-family: 'Playfair Display', serif;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
     height: 100vh;
     margin: 0;
     padding: 0;
 }
 
+
+h1 {
+    margin: 20px;
+    font-weight: 400;
+    font-size: 60px;
+    color: #FFFBF5;
+    text-align: center;
+}
+
 .background-color {
-    width: 100vw;
-    height: calc(100vw / 2.3);
+    z-index: -1;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    clip-path: polygon(0 0, 111% 0, 0 85%);
     background-color: var(--color);
-    animation: groove 34s alternate infinite;
-    z-index: 0;
 }
 
 @keyframes groove {
@@ -35,14 +41,16 @@ body {
     }
 }
 
+
 .heroPicture {
-    position: absolute;
     width: var(--width);
     height: calc(var(--width) + 25px);
     margin: 60px;
     top: 0;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     z-index: 2;
+    position: relative;
+    display: inline-block;
 }
 
 .heroPicture>img {
@@ -56,15 +64,12 @@ body {
     filter: sepia(69%);
 }
 
-h1 {
+.heroPicture>figcaption {
     position: absolute;
-    margin: 20px;
-    font-weight: 400;
-    font-size: 60px;
-    color: #FFFBF5;
-    text-align: center;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     bottom: 0;
+    left: 0;
+    width: 100%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .heroInfo {
@@ -228,7 +233,7 @@ main {
 }
 
 footer {
-    width: 100vw;
+    width: 100%;
     color: #fff;
     background-color: var(--color);
     display: flex;
@@ -307,12 +312,6 @@ footer>section {
 }
 
 @media screen and (max-width: 834px)  {
-    header {
-        height: fit-content;
-    }
-    .background-color {
-        height: calc(calc(100vw / 2.1) + 75px);
-    }
     .heroPicture {
         margin: 40px;
         width: calc(100vw / 2.1);
@@ -371,13 +370,6 @@ footer>section {
 }
 
 @media screen and (max-width: 430px) {
-    header {
-        height: fit-content;
-    }
-    .background-color {
-        right: 0;
-        height: calc(100vw + 100px);
-    }
     .heroPicture {
         display: block;
         width: 100%;
